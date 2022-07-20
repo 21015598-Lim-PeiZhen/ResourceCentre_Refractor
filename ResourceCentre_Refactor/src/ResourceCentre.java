@@ -269,8 +269,10 @@ public class ResourceCentre {
 	public static boolean doReturnCamcorder(ArrayList<Camcorder> camcorderList,String tag) {
 		boolean isReturned = false;
 
+
 		for (int i = 0; i < camcorderList.size(); i++) {
 			String assetTag = camcorderList.get(i).getAssetTag();
+
 			if (tag.equalsIgnoreCase(assetTag)
 					&& camcorderList.get(i).getIsAvailable() == false) {
 				camcorderList.get(i).setIsAvailable(true);
@@ -298,8 +300,13 @@ public class ResourceCentre {
 		// write your code here
 		boolean isReturned = false;
 
+
 		for (int i = 0; i < chromebookList.size(); i++) {
-			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag()) && chromebookList.get(i).getIsAvailable() == false) {
+			String assetTag = chromebookList.get(i).getAssetTag();
+
+		
+			if (tag.equalsIgnoreCase(assetTag)
+					&& chromebookList.get(i).getIsAvailable() == false) {
 				chromebookList.get(i).setIsAvailable(true);
 				chromebookList.get(i).setDueDate("");
 				isReturned = true;
