@@ -1,4 +1,3 @@
-
 public class Item {
 	private String assetTag;
 	private String description;
@@ -11,13 +10,14 @@ public class Item {
 		this.dueDate = "";
 		this.isAvailable = true;
 	}
+	
 	public String toString() {
 		
 		// Write your codes here
-		String itemInfo = String.format("%-10s %-30s %-10s %-10s",
+		String itemInfo = String.format("%-10s %-30s %-10s %-10s", 
 				assetTag,
 				description, 
-				showAvailability(isAvailable),
+				ResourceCentre.showAvailability(isAvailable),
 				dueDate);
 		
 		return itemInfo;
@@ -35,7 +35,7 @@ public class Item {
 		
 		return avail;
 	}
-	
+
 	public String getAssetTag() {
 		return assetTag;
 	}
